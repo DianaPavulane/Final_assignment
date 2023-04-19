@@ -1,0 +1,6 @@
+- name: Create Team 2 user
+  user:
+    name: team2_user #set the username
+    state: present  #telling ansible we want the user to exist
+    create_home: yes  #create a home directory for a user
+    password_lock: yes
