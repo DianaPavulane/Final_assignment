@@ -36,7 +36,7 @@ resource "aws_instance" "team2_final_assignment" {
 
   # To run the script without inventory file
   provisioner "local-exec" {
-    command = "sleep 80 && ansible-playbook -i '${aws_instance.team2_final_assignment.public_ip},' -e ip_address=${aws_instance.team2_final_assignment.public_ip} final_playbook.yml --user ${var.aws_instance_user_id} --private-key ${var.private_key_path}"
+    command = "sleep 80 && ansible-playbook -i '${aws_instance.team2_final_assignment.public_ip},'final_playbook.yml --user ${var.aws_instance_user_id} --private-key ${var.private_key_path}"
   }
 }
 
